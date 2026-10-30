@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Последний онлайн</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- НАЧАЛО -->
+
+  <div id="start" class="screen active">
+
+    <div class="icon">📱</div>
+
+    <p class="label">01:17 • UNKNOWN</p>
+
+    <h1>
+      ПОСЛЕДНИЙ<br>
+      <span>ОНЛАЙН</span>
+    </h1>
+
+    <p>
+      Ты получила сообщение от номера,<br>
+      которого нет в твоих контактах.
+    </p>
+
+    <button onclick="startGame()">
+      ОТКРЫТЬ ЧАТ
+    </button>
+
+  </div>
+
+
+  <!-- ЧАТ -->
+
+  <div id="chat" class="screen">
+
+    <div class="phone">
+
+      <div class="top">
+        <span>01:17</span>
+        <span>● ● ●</span>
+      </div>
+
+      <div class="header">
+
+        <div class="avatar">?</div>
+
+        <div>
+          <b>Неизвестный</b>
+          <small>онлайн</small>
+        </div>
+
+      </div>
+
+      <div id="messages"></div>
+
+      <div id="choices"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ФОТОГРАФИЯ -->
+
+  <div id="photo" class="screen">
+
+    <div class="photoBox">
+
+      <div class="fakePhoto">
+
+        <div class="window"></div>
+
+        <div class="shadow">
+          👤
+        </div>
+
+      </div>
+
+      <p class="label">
+        PHOTO • 01:24
+      </p>
+
+      <h2>
+        Это твой дом.
+      </h2>
+
+      <p>
+        Но кто-то сделал эту фотографию<br>
+        несколько минут назад.
+      </p>
+
+      <button onclick="afterPhoto()">
+        ПРОДОЛЖИТЬ
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ФИНАЛ -->
+
+  <div id="death" class="screen">
+
+    <div class="deathIcon">
+      🕯️
+    </div>
+
+    <p class="label">
+      02:06
+    </p>
+
+    <h1>
+      ПОСЛЕДНЕЕ<br>
+      <span>СООБЩЕНИЕ</span>
+    </h1>
+
+    <p>
+      Полиция приехала после звонка соседки.<br>
+      Тебя нашли мёртвой в комнате.
+    </p>
+
+    <p class="last">
+      Телефон лежал рядом.<br>
+      На экране был открыт этот сайт.
+    </p>
+
+    <button onclick="showVisitors()">
+      ПОСМОТРЕТЬ САЙТ
+    </button>
+
+  </div>
+
+
+  <!-- ПОСЕТИТЕЛИ -->
+
+  <div id="visitors" class="screen">
+
+    <div class="icon">
+      👁️
+    </div>
+
+    <p class="label">
+      VISITOR LOG
+    </p>
+
+    <h1>
+      КТО<br>
+      <span>ВИДЕЛ ЭТО?</span>
+    </h1>
+
+    <div id="visitorList">
+
+      <div class="visitor">
+        <b>Алекс</b>
+        <span>01:19</span>
+      </div>
+
+      <div class="visitor">
+        <b>Маша</b>
+        <span>01:43</span>
+      </div>
+
+      <div class="visitor">
+        <b>Никита</b>
+        <span>01:57</span>
+      </div>
+
+      <div class="visitor danger">
+        <b>Неизвестный</b>
+        <span>СЕЙЧАС</span>
+      </div>
+
+    </div>
+
+    <p id="visitorMessage"
+       class="finalText">
+    </p>
+
+  </div>
+
+
+  <!-- ПОСЛЕДНИЙ ЭКРАН -->
+
+  <div id="final" class="screen">
+
+    <div class="icon">
+      📱
+    </div>
+
+    <p class="label">
+      NEW MESSAGE
+    </p>
+
+    <h1>
+      <span>НЕ ОТКРЫВАЙ</span>
+    </h1>
+
+    <div class="message incoming">
+      Я предупреждал тебя.
+    </div>
+
+    <div class="message incoming">
+      Теперь они видят этот сайт.
+    </div>
+
+    <div class="message incoming">
+      И ты тоже.
+    </div>
+
+    <p class="finalText">
+      Последний онлайн:
+      <b>СЕЙЧАС</b>
+    </p>
+
+  </div>
+
+
+  <!-- ПОДКЛЮЧАЕМ JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
